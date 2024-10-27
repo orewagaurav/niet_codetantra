@@ -50,5 +50,4 @@ int main(int argc, char *argv[]) {
 	int resultsArrLength = mergeTwoSLL(list1, list1Len, list2, list2Len, resultsArr);
 	printArrayElements(resultsArr, resultsArrLength);
 	return 0;
-	
 }
