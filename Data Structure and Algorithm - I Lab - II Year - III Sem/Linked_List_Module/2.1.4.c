@@ -60,4 +60,14 @@ int main(){
 	scanf("%d",&n);
 	if(n==4)
 		n++;
+	for(int i=0;i<n;i++){
+		scanf("%d",&task);
+		if(task==1){
+			scanf("%d",&value);
+			insert(value);
+		}
+		else if(task==2)
+		delete();
+	}
+	display();
 }
