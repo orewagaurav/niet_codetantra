@@ -29,11 +29,24 @@
 // -1
 
 #include <stdio.h>
+void selection_sort(int arr[],int n){
+	for(int i=0;i<n;i++){
+		int small = i;
+		for(int j=i+1;j<n;j++){
+			if(arr[j]<arr[small]){
+				int tmp = arr[j];
+				arr[j]=arr[small];
+				arr[small]=tmp;
+			}
+		}
+	}
+}
 int main(){
-	int n,i,j,elements =0;
+	int n;
 	scanf("%d",&n);
+	int elements=0;
 	int arr[n];
-	for(i=0;;i++){
+	for(int i=0;;i++){
 		scanf("%d",&arr[i]);
 		elements++;
 		char c;
@@ -42,30 +55,17 @@ int main(){
 			break;
 		}
 	}
-	for(i=0;i<n-1;i++){
-		for(j=i+1;j<n;j++){
-			if(arr[i]>arr[j]){
-				int temp;
-				temp=arr[i];
-				arr[i]=arr[j];
-				arr[j]=temp;
-			}
-			else{
-				continue;
-			}
-		}
-	}
+	selection_sort(arr,n);
 	if(n==elements){
-		for(i=0;i<n;i++){
-			if(i<n-1){
-				printf("%d ",arr[i]);
-			}
-			else{
-				printf("%d\n",arr[i]);
-			}
+		for(int i=0;i<n;i++){
+			if(i<n-1)
+			printf("%d ",arr[i]);
+			else
+			printf("%d",arr[i]);
 		}
+		printf("\n");
 	}
 	else{
-		printf("-1");
+		printf("-1\n");
 	}
 }
