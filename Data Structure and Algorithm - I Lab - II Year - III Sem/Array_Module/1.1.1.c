@@ -1,8 +1,5 @@
 // Implement a program to find the maximum element in an array of size 
 // n
-// .
-
-
 
 // Input Format:
 
