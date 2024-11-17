@@ -27,10 +27,10 @@ void sort(int values[],int weight[],int n){
 double max(int values[],int weight[],int n,int capacity){
 	sort(values,weight,n);
 	double totalVal = 0.0;
-	for(int i=0;i<n&&capacity>0;i++){
-		if(weight[i]<=capacity){
-			capacity -=weight[i];
-			totalVal +=values[i];
+	for(int i=0;i<n && capacity>0;i++){
+		if(weight[i] <= capacity){
+			capacity -= weight[i];
+			totalVal += values[i];
 		}
 		else{
 			totalVal += (double)values[i]*capacity/weight[i];
