@@ -6,7 +6,6 @@ struct node {
 	struct node *left;
 	struct node *right;
 };
-
 struct node *create(){
 	int data;
 	struct node * new;
