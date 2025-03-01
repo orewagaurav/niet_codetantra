@@ -17,7 +17,7 @@ struct node *createNode(int data) {
 struct node *insert(struct node *root, int data, char side) {
     if (root == NULL) return createNode(data);
 
-    struct node *queue[100];
+    struct node *queue[10];
     int front = 0, rear = 0;
     queue[rear++] = root;
 
