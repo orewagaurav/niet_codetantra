@@ -32,7 +32,6 @@ void bfs(int graph[max][max],int node,int visited[]){
 		}
 	}
 }
-
 int main(){
 	int v,e;
 	scanf("%d",&v);
